@@ -3,13 +3,14 @@ import styled from "styled-components";
 import Gender from "../components/gender";
 import Slider from "../components/heightSlider";
 import CardSection from "../sections/cardSection";
-
+import Result from '../components/result';
 function BmiDashboard() {
   return (
     <Fragment>
       <DashboardCard>
         <AppTitle>Neomorphic BMI Calculator</AppTitle>
         <Flexbox>
+          <Result />
           <Gender />
           <Slider />
           <CardSection />
