@@ -31,7 +31,7 @@ function Age(props) {
   };
 
   const incrementAge = () => {
-    setWeight(Number(age) + 1);
+    setAge(Number(age) + 1);
   };
 
   const decrementAge = () => {
