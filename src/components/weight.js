@@ -10,6 +10,11 @@ import {
   CustomInput
 } from "../styling";
 
+// redux state
+import {useSelector, useDispatch} from 'react-redux';
+import {changeWeight} from '../actions/bmi';
+
+
 const Test = ({ weight, handler }) => (
   <div>
     {/* <CardValue>{weight}</CardValue> */}
@@ -19,26 +24,32 @@ const Test = ({ weight, handler }) => (
 );
 
 function Weight(props) {
-  const [weight, setWeight] = useState(90);
+  // const [weight, setWeight] = useState(90);
+
+  const {weight} = useSelector((globalState)=> globalState.bmiReducer);
+  const dispatch = useDispatch();
 
   const handleWeightChange = event => {
     let temp = Number(event.target.value);
     console.log(temp);
     let reg = new RegExp("^[0-9]+$");
     if (reg.test(temp)) {
-      setWeight(temp);
+      dispatch(changeWeight(temp));
+      // setWeight(temp);
     } else {
       console.log("This is not correct");
     }
   };
 
   const incrementWeight = () => {
-    setWeight(Number(weight) + 1);
+    dispatch(changeWeight(Number(weight+1)));
+    // setWeight(Number(weight) + 1);
   };
 
   const decrementWeight = () => {
     if (weight !== 0) {
-      setWeight(weight - 1);
+      dispatch(changeWeight(Number(weight-1)));
+      // setWeight(weight - 1);
     }
   };
 

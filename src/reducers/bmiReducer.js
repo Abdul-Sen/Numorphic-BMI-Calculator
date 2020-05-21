@@ -15,9 +15,6 @@ const bmiReducer = (state = INIT_STATE, action) => {
                 height : action.height
             }   
         case 'CHANGE_GENDER':
-            console.log(`correct`);
-            console.log(action);
-            console.log(state);
             return {
                 ...state,
                 gender: action.gender
@@ -25,7 +22,7 @@ const bmiReducer = (state = INIT_STATE, action) => {
         case 'CHANGE_WEIGHT':
             return {
                 ...state,
-                [action.weight]: action.weight
+                weight: action.weight
             };
         default:
             return state;
