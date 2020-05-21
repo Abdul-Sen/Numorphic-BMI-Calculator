@@ -7,16 +7,22 @@ import OptionTitle from "./shared/OptionTitle";
 // get our fontawesome imports
 import { faMars, faVenus } from "@fortawesome/free-solid-svg-icons";
 
+// redux state
+import {useSelector, useDispatch} from 'react-redux';
+import {changeGender} from '../actions/bmi';
+
 function Gender() {
-  const [selectedMale, setSelectedMale] = useState(true);
+
+  const {gender: selectedMale} = useSelector((globalState)=> globalState.bmiReducer);
+  const dispatch = useDispatch();
 
   const handleClick = event => {
     console.log(`button clicked ${event.target.classList.contains("female")}`);
 
     if (event.target.classList.contains("male")) {
-      setSelectedMale(current => true);
+      dispatch(changeGender(true));
     } else {
-      setSelectedMale(current => false);
+      dispatch(changeGender(false));
     }
   };
 

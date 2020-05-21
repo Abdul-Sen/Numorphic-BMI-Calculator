@@ -2,7 +2,7 @@ const INIT_STATE = {
     age: 23,
     weight: 102,
     height: 175,
-    gender: "Male",
+    gender: true,
     bmi: 0,
     comment: ""
 };
@@ -14,6 +14,14 @@ const bmiReducer = (state = INIT_STATE, action) => {
                 ...state,
                 height : action.height
             }   
+        case 'CHANGE_GENDER':
+            console.log(`correct`);
+            console.log(action);
+            console.log(state);
+            return {
+                ...state,
+                gender: action.gender
+            }
         case 'CHANGE_WEIGHT':
             return {
                 ...state,
