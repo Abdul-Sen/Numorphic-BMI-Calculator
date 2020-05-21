@@ -3,8 +3,6 @@ const INIT_STATE = {
     weight: 102,
     height: 175,
     gender: true,
-    bmi: 0,
-    comment: ""
 };
 
 const bmiReducer = (state = INIT_STATE, action) => {

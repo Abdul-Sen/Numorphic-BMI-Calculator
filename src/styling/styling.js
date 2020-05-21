@@ -15,8 +15,8 @@ export const CustomInput = styled.input`
   border: none;
   display: inline-block;
   margin: 0;
-  width: 120px;
-  font-size: 65px;
+  width: ${props=> props.width? props.width :  "120px"};
+  font-size: ${props=> props.fontSize? props.fontSize: "65px"};
   color: #6d7b94;
   font-family: roboto;
   font-weight: 300;

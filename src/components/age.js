@@ -16,7 +16,7 @@ import {changeAge} from '../actions/bmi';
 
 const Test = ({ age, handler }) => (
   <div>
-    <CustomInput maxLength={3} value={age} onChange={handler} />
+    <CustomInput width={"90px"} maxLength={2} value={age} onChange={handler} />
   </div>
 );
 
@@ -40,13 +40,11 @@ function Age(props) {
   };
 
   const incrementAge = () => {
-    // setAge(Number(age) + 1);
     dispatch(changeAge(Number(age)+1));
   };
 
   const decrementAge = () => {
     if (age !== 0) {
-      // setAge(age - 1);
       dispatch(changeAge(Number(age)-1));
 
     }

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Flexbox from './shared/flexbox';
 import {useSelector } from 'react-redux';
@@ -16,8 +16,23 @@ align-items: center;
 justify-content: center;
 text-align: center; 
 `
+const ResultFormat = styled.div`
+font-family: roboto;
+font-size: 3em;
+color: #6d7b94;
+`;
 function Result(props) {
-    const BmiState = useSelector((rootReducer)=> rootReducer.bmiReducer);
+    const bmiState = useSelector((rootReducer)=> rootReducer.bmiReducer);
+    const [bmi,setBmi] = useState(0);
+    useEffect(()=>{
+        calculateBMI();
+    },[bmiState]);
+
+    const calculateBMI = ()=>{
+        let {height, weight} = bmiState;
+        height = height/1000;
+        setBmi((weight/(height*height))/100);
+    }
     return (
         <Fragment>
             <Flexbox
@@ -27,7 +42,9 @@ function Result(props) {
                 alignItems={"center"}
             >
                 <Body>
-                    {BmiState.bmi}
+                    <ResultFormat>
+                    {Math.round(bmi*10)/10}
+                    </ResultFormat>
                 </Body>
             </Flexbox>
         </Fragment>
