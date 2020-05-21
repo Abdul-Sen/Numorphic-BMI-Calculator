@@ -3,6 +3,12 @@ import styled from "styled-components";
 import Flexbox from "./shared/flexbox";
 import OptionTitle from "./shared/OptionTitle";
 
+// state
+import {useSelector, useDispatch} from 'react-redux';
+import { changeHeight } from '../actions/bmi';
+
+
+
 const sliderThumbStyle = props => `
   cursor: pointer;
   width: 20px;
@@ -46,13 +52,12 @@ const Styles = styled.div`
   }
 `;
 function Slider(props) {
-  const [sliderValue, setSliderValue] = useState(250);
+  const {height} = useSelector((globalState)=> globalState.bmiReducer);
+  const dispatch = useDispatch();
 
   const handleValueChange = e => {
-    console.log(e.target.value);
     let newVal = e.target.value;
-
-    setSliderValue(newVal);
+    dispatch(changeHeight(newVal));
   };
 
   return (
@@ -63,13 +68,12 @@ function Slider(props) {
       alignItems={"center"}
     >
       <OptionTitle>Height</OptionTitle>
-
       <Styles>
-        <p className={"value"}>{sliderValue}</p>
+        <p className={"value"}>{height}</p>
         <input
           className={"slider"}
           onChange={handleValueChange}
-          value={sliderValue}
+          value={height}
           type={"range"}
           min={100}
           max={400}
