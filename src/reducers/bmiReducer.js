@@ -20,4 +20,4 @@ const bmiReducer = (state = INIT_STATE, action) => {
     }
 };
 
-export default colorsReducer;
+export default bmiReducer;

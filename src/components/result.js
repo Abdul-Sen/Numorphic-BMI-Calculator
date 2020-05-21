@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import Flexbox from './shared/flexbox';
+import {useSelector } from 'react-redux';
 
 const Body = styled.div`
 margin: 20px;
@@ -16,6 +17,7 @@ justify-content: center;
 text-align: center; 
 `
 function Result(props) {
+    const BmiState = useSelector((rootReducer)=> rootReducer.bmiReducer);
     return (
         <Fragment>
             <Flexbox
@@ -25,7 +27,7 @@ function Result(props) {
                 alignItems={"center"}
             >
                 <Body>
-                    test
+                    {BmiState.bmi}
                 </Body>
             </Flexbox>
         </Fragment>
