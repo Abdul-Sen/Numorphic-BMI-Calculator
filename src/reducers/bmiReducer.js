@@ -24,6 +24,11 @@ const bmiReducer = (state = INIT_STATE, action) => {
                 ...state,
                 weight: action.weight
             };
+        case 'CHANGE_AGE':
+            return {
+                ...state,
+                age: action.age
+            };
         default:
             return state;
     }

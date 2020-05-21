@@ -13,3 +13,8 @@ export const changeGender = (gender) =>({
     type: 'CHANGE_GENDER',
     gender
 });
+
+export const changeAge = (age) =>({
+    type: 'CHANGE_AGE',
+    age
+});

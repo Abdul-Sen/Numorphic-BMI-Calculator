@@ -9,34 +9,46 @@ import {
   CustomInput
 } from "../styling";
 
+// redux state
+import {useSelector, useDispatch} from 'react-redux';
+import {changeAge} from '../actions/bmi';
+
+
 const Test = ({ age, handler }) => (
   <div>
-    {/* <CardValue>{weight}</CardValue> */}
     <CustomInput maxLength={3} value={age} onChange={handler} />
   </div>
 );
 
 function Age(props) {
-  const [age, setAge] = useState(23);
+
+  const {age} = useSelector((globalState)=> globalState.bmiReducer);
+  const dispatch = useDispatch();
+
+  // const [age, setAge] = useState(23);
 
   const handleAgeChange = event => {
     let temp = Number(event.target.value);
     console.log(temp);
     let reg = new RegExp("^[0-9]+$");
     if (reg.test(temp)) {
-      setAge(temp);
+      // setAge(temp);
+      dispatch(changeAge(temp));
     } else {
       console.log("This is not correct");
     }
   };
 
   const incrementAge = () => {
-    setAge(Number(age) + 1);
+    // setAge(Number(age) + 1);
+    dispatch(changeAge(Number(age)+1));
   };
 
   const decrementAge = () => {
     if (age !== 0) {
-      setAge(age - 1);
+      // setAge(age - 1);
+      dispatch(changeAge(Number(age)-1));
+
     }
   };
 
