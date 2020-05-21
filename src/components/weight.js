@@ -17,14 +17,12 @@ import {changeWeight} from '../actions/bmi';
 
 const Test = ({ weight, handler }) => (
   <div>
-    {/* <CardValue>{weight}</CardValue> */}
     <CustomInput maxLength={3} value={weight} onChange={handler} />
     <Unit>KG</Unit>
   </div>
 );
 
 function Weight(props) {
-  // const [weight, setWeight] = useState(90);
 
   const {weight} = useSelector((globalState)=> globalState.bmiReducer);
   const dispatch = useDispatch();
@@ -35,7 +33,6 @@ function Weight(props) {
     let reg = new RegExp("^[0-9]+$");
     if (reg.test(temp)) {
       dispatch(changeWeight(temp));
-      // setWeight(temp);
     } else {
       console.log("This is not correct");
     }
@@ -43,13 +40,11 @@ function Weight(props) {
 
   const incrementWeight = () => {
     dispatch(changeWeight(Number(weight+1)));
-    // setWeight(Number(weight) + 1);
   };
 
   const decrementWeight = () => {
     if (weight !== 0) {
       dispatch(changeWeight(Number(weight-1)));
-      // setWeight(weight - 1);
     }
   };
 
