@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import Flexbox from "./shared/flexbox";
 import OptionTitle from "./shared/OptionTitle";
