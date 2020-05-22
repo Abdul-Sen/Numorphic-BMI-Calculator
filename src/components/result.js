@@ -33,9 +33,15 @@ function Result(props) {
 
     const calculateBMI = ()=>{
         let {height, weight} = bmiState;
-        height = height/1000;
-        setBmi((weight/(height*height))/100);
-        calculateComment();
+        if(height > 0 )
+        {
+            height = height/1000;
+            setBmi((weight/(height*height))/100);
+            calculateComment();    
+        }
+        else{
+            setBmi(0);
+        }
     }
 
     const calculateComment = ()=>{
