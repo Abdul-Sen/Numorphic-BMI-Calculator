@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import { Provider } from 'react-redux';
 // Store
-import {createStore} from 'redux';
 import globalStore from './store/globalStore';
 
 const store = globalStore();

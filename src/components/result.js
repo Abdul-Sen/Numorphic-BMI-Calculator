@@ -2,7 +2,8 @@ import React, { Fragment, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Flexbox from './shared/flexbox';
 import {useSelector } from 'react-redux';
-
+import OptionTitle from "./shared/OptionTitle";
+import * as RANGE from './range.json';
 const Body = styled.div`
 margin: 20px;
 border-radius: 50%;
@@ -21,8 +22,10 @@ font-family: roboto;
 font-size: 3em;
 color: #6d7b94;
 `;
+
 function Result(props) {
     const bmiState = useSelector((rootReducer)=> rootReducer.bmiReducer);
+    const [comment, setComment] = useState('');
     const [bmi,setBmi] = useState(0);
     useEffect(()=>{
         calculateBMI();
@@ -32,6 +35,26 @@ function Result(props) {
         let {height, weight} = bmiState;
         height = height/1000;
         setBmi((weight/(height*height))/100);
+        calculateComment();
+    }
+
+    const calculateComment = ()=>{
+        let index = null;
+        index = RANGE.range.findIndex((element)=>{
+            if(element.min <= bmiState.age && element.max >= bmiState.age)
+            {
+                return true;
+            }
+        });
+        if(index != -1)
+        {
+            let commentBuilder = '';
+            commentBuilder = `Ideal ${(bmiState.gender == true? "man":"women")} in age group of ${RANGE.range[index].min} to ${RANGE.range[index].max} have a BMI of ${(bmiState.gender == true? RANGE.range[index].male:RANGE.range[index].female)}`;
+            setComment(commentBuilder);
+        }
+        else{
+            setComment('');
+        }
     }
     return (
         <Fragment>
@@ -47,6 +70,7 @@ function Result(props) {
                     </ResultFormat>
                 </Body>
             </Flexbox>
+            <OptionTitle style={{textAlign:"center"}} >{comment}</OptionTitle>
         </Fragment>
     )
 }
