@@ -49,7 +49,7 @@ function Result(props) {
         if(index != -1)
         {
             let commentBuilder = '';
-            commentBuilder = `Ideal ${(bmiState.gender == true? "man":"women")} in age group of ${RANGE.range[index].min} to ${RANGE.range[index].max} have a BMI of ${(bmiState.gender == true? RANGE.range[index].male:RANGE.range[index].female)}`;
+            commentBuilder = `Ideal ${(bmiState.gender == true? "men":"women")} in age group of ${RANGE.range[index].min} to ${RANGE.range[index].max} have a BMI of ${(bmiState.gender == true? RANGE.range[index].male:RANGE.range[index].female)}`;
             setComment(commentBuilder);
         }
         else{

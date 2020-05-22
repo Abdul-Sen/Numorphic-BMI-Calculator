@@ -1,7 +1,7 @@
 const INIT_STATE = {
-    age: 23,
-    weight: 102,
-    height: 175,
+    age: 0,
+    weight: 0,
+    height: 250,
     gender: true,
 };
 

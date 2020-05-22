@@ -51,6 +51,15 @@ const Styles = styled.div`
     background-color: black;
   }
 `;
+
+const SliderInputText = styled.input`
+  border: none;
+  width: 40px;
+  margin-bottom: 20px;
+  background: transparent;
+  font-family: roboto;
+  font-size: 1.5em;
+`;
 function Slider(props) {
   const {height} = useSelector((globalState)=> globalState.bmiReducer);
   const dispatch = useDispatch();
@@ -67,9 +76,9 @@ function Slider(props) {
       flexDirection={"row"}
       alignItems={"center"}
     >
-      <OptionTitle>Height</OptionTitle>
+      <OptionTitle>Height (cm)</OptionTitle>
       <Styles>
-        <p className={"value"}>{height}</p>
+        <SliderInputText type={"text"} maxLength={3} value={height} onChange={handleValueChange} />
         <input
           className={"slider"}
           onChange={handleValueChange}
