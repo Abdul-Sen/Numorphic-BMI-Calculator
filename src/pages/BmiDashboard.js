@@ -25,18 +25,16 @@ export default BmiDashboard;
 
 const DashboardCard = styled.div`
   border-radius: 50px;
-  /* background: linear-gradient(145deg, #e7ffff, #bed8e9); */
   background: #e5eefc;
-  /* box-shadow: 20px 20px 60px #b8cad6, -20px -20px 60px #f8ffff; */
   box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2),
     -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
-
   max-width: 800px;
   padding: 25px;
   border-radius: 5px;
   margin: 0 auto;
   margin-top: 50px;
-  padding-bottom: 100px;
+  padding-bottom: 60px;
+  margin-bottom: 60px;
 `;
 
 const AppTitle = styled.h2`

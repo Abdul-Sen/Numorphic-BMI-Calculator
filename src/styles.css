@@ -1,9 +1,8 @@
 .App {
-  /* font-family: sans-serif;
-  text-align: center; */
   background: #e0eaf9;
-  height: 1024px;
+  height: 100%;
   padding: 20px;
+
 }
 
 *:focus {
