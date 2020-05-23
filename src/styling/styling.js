@@ -4,10 +4,9 @@ export const Unit = styled.h4`
   display: inline-block;
   margin: 0;
   font-size: 15px;
-  color: #6d7b94;
+  color: ${props => props.theme.colors.fontcolor};
   font-family: roboto;
   margin: 5px;
-  /* font-weight: 300; */
 `;
 
 export const CustomInput = styled.input`
@@ -17,12 +16,12 @@ export const CustomInput = styled.input`
   margin: 0;
   width: ${props=> props.width? props.width :  "120px"};
   font-size: ${props=> props.fontSize? props.fontSize: "65px"};
-  color: #6d7b94;
+  color:  ${props => props.theme.colors.fontcolor};
   font-family: roboto;
   font-weight: 300;
 `;
 export const CardTitle = styled.h2`
-  color: #6d7b94;
+  color: ${props => props.theme.colors.fontcolor};
   font-family: roboto;
   font-weight: 300;
 `;
