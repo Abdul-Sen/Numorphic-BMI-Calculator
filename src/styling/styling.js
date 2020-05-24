@@ -5,7 +5,6 @@ export const Unit = styled.h4`
   margin: 0;
   font-size: 15px;
   color: ${props => props.theme.colors.fontcolor};
-  font-family: roboto;
   margin: 5px;
 `;
 
@@ -17,12 +16,10 @@ export const CustomInput = styled.input`
   width: ${props=> props.width? props.width :  "120px"};
   font-size: ${props=> props.fontSize? props.fontSize: "65px"};
   color:  ${props => props.theme.colors.fontcolor};
-  font-family: roboto;
   font-weight: 300;
 `;
 export const CardTitle = styled.h2`
   color: ${props => props.theme.colors.fontcolor};
-  font-family: roboto;
   font-weight: 300;
 `;
 

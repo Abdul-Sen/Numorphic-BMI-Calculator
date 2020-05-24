@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./styles.css";
 import BmiDashboard from "./pages/BmiDashboard";
 
 //Theming
@@ -7,11 +6,13 @@ import {ThemeProvider } from 'styled-components';
 import light from './styling/themes/light';
 import dark from './styling/themes/dark';
 import styled from 'styled-components';
+import ToggleTheme from './components/toggleTheme';
 
 const AppTheme = styled.div`
 background: ${props => props.theme.colors.background};
 height: 100%;
 padding: 20px;
+font-family: roboto;
 
 *:focus {
   outline: 0;
@@ -19,7 +20,7 @@ padding: 20px;
 `;
 
 export default function App() {
-  const [themeState, setThemeState] = useState(dark);
+  const [themeState, setThemeState] = useState(light);
   const changeThemme = ()=>{
     if(themeState.themeName == "light")
     {
@@ -31,12 +32,11 @@ export default function App() {
   }
   return (
     <ThemeProvider theme={themeState}>
-      <button onClick={changeThemme}>Change theme</button>
-    {/* <div className="App" id="mainApp"> */}
+      {/* <button onClick={changeThemme}>Change theme</button> */}
       <AppTheme>
+       <ToggleTheme handler={changeThemme}/>
       <BmiDashboard />
       </AppTheme>
-    {/* </div> */}
     </ThemeProvider>
   );
 }

@@ -32,13 +32,12 @@ const DashboardCard = styled.div`
   padding: 25px;
   border-radius: 5px;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 20px;
   padding-bottom: 60px;
   margin-bottom: 60px;
 `;
 
 const AppTitle = styled.h2`
-  font-family: roboto;
   text-align: center;
   color:  ${props => props.theme.colors.fontcolor};
 `;

@@ -18,7 +18,6 @@ justify-content: center;
 text-align: center; 
 `
 const ResultFormat = styled.div`
-font-family: roboto;
 font-size: 3em;
 color: #6d7b94;
 `;

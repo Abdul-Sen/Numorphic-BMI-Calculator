@@ -25,7 +25,6 @@ const Styles = styled.div`
   align-items: center;
 
   .value {
-    font-family: roboto;
     font-size: 1.5em;
   }
 
@@ -55,7 +54,6 @@ const SliderInputText = styled.input`
   color: ${props => props.theme.colors.fontcolor};
   margin-bottom: 20px;
   background: transparent;
-  font-family: roboto;
   font-size: 1.5em;
 `;
 function Slider(props) {
