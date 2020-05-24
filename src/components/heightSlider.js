@@ -15,14 +15,10 @@ const sliderThumbStyle = props => `
   height: 20px;
   border-radius: 50%;
   background: black;
-  box-shadow: 12px 12px 24px #c2d4e1, -12px -12px 24px #eeffff;
-  
-
 `;
 
 const Styles = styled.div`
   margin-left: 25px;
-  /* margin: 20px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,13 +44,14 @@ const Styles = styled.div`
     }
 
     width: 100%;
-    background-color: black;
+    background-color: ${props => props.theme.colors.fontcolor};
   }
 `;
 
 const SliderInputText = styled.input`
   border: none;
   width: 40px;
+  color: ${props => props.theme.colors.fontcolor};
   margin-bottom: 20px;
   background: transparent;
   font-family: roboto;
