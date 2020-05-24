@@ -1,1 +1,0 @@
-{"version":3,"sources":["styles.css"],"names":[],"mappings":"AAAA,KACE,kBAAmB,CACnB,WAAY,CACZ,YAEF,CAEA,OACE,SACF","file":"main.1beef5ff.chunk.css","sourcesContent":[".App {\r\n  background: #e0eaf9;\r\n  height: 100%;\r\n  padding: 20px;\r\n\r\n}\r\n\r\n*:focus {\r\n  outline: 0;\r\n}"]}

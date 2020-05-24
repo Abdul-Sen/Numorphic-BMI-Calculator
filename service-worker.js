@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Neomorphic-BMI-Calculator/precache-manifest.8035227ae4703306b2b9361929598de2.js"
+  "/Neomorphic-BMI-Calculator/precache-manifest.690a5b96d4f57ab029001b1942a33d5b.js"
 );
 
 self.addEventListener('message', (event) => {
