@@ -35,11 +35,13 @@ export const ButtonContainer = styled.div`
   justify-content: center;
 `;
 
+
+//12px 12px 24px 0 rgba(0, 0, 0, 0.2), -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
 export const CustomButton = styled.button`
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  box-shadow: 8px 8px 15px #c3cad6, -8px -8px 15px #ffffff;
+  box-shadow:${props => props.theme.themeName == "light"? "8px 8px 15px #c3cad6, -8px -8px 15px #ffffff":"12px 12px 12px 0 rgba(0, 0, 0, 0.2), -2px -2px 5px 0 rgba(255, 255, 255, 0.5)"};
   background-color: transparent;
   border: none;
 

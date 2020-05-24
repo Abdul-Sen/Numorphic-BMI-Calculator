@@ -12,6 +12,7 @@ import {
 // redux state
 import {useSelector, useDispatch} from 'react-redux';
 import {changeAge} from '../actions/bmi';
+import { withTheme } from "styled-components";
 
 
 const Test = ({ age, handler }) => (
@@ -61,7 +62,7 @@ function Age(props) {
               className={"male"}
               size={"2x"}
               icon={faMinus}
-              color={"#6d7b94"}
+              color={props.theme.colors.fontcolor}
             />
           </CustomButton>
           <CustomButton onClick={incrementAge}>
@@ -69,7 +70,7 @@ function Age(props) {
               className={"male"}
               size={"2x"}
               icon={faPlus}
-              color={"#6d7b94"}
+              color={props.theme.colors.fontcolor}
             />
           </CustomButton>
         </ButtonContainer>
@@ -78,4 +79,4 @@ function Age(props) {
   );
 }
 
-export default Age;
+export default withTheme(Age);

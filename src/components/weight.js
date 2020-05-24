@@ -13,6 +13,7 @@ import {
 // redux state
 import {useSelector, useDispatch} from 'react-redux';
 import {changeWeight} from '../actions/bmi';
+import { withTheme } from "styled-components";
 
 
 const Test = ({ weight, handler }) => (
@@ -59,7 +60,7 @@ function Weight(props) {
               className={"male"}
               size={"2x"}
               icon={faMinus}
-              color={"#6d7b94"}
+              color={props.theme.colors.fontcolor}
             />
           </CustomButton>
           <CustomButton onClick={incrementWeight}>
@@ -67,7 +68,7 @@ function Weight(props) {
               className={"male"}
               size={"2x"}
               icon={faPlus}
-              color={"#6d7b94"}
+              color={props.theme.colors.fontcolor}
             />
           </CustomButton>
         </ButtonContainer>
@@ -76,4 +77,4 @@ function Weight(props) {
   );
 }
 
-export default Weight;
+export default withTheme(Weight);

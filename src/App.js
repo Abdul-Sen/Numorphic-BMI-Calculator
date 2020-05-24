@@ -19,7 +19,7 @@ padding: 20px;
 `;
 
 export default function App() {
-  const [themeState, setThemeState] = useState(light);
+  const [themeState, setThemeState] = useState(dark);
   const changeThemme = ()=>{
     if(themeState.themeName == "light")
     {

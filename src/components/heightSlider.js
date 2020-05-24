@@ -15,6 +15,7 @@ const sliderThumbStyle = props => `
   height: 20px;
   border-radius: 50%;
   background: black;
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2), -2px -2px 5px 0 rgba(255, 255, 255, 0.5);
 `;
 
 const Styles = styled.div`

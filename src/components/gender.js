@@ -14,8 +14,6 @@ import {useSelector, useDispatch} from 'react-redux';
 import {changeGender} from '../actions/bmi';
 
 function Gender(props) {
-  console.log(`---> ${props.theme.themeName}`);
-
   const {gender: selectedMale} = useSelector((globalState)=> globalState.bmiReducer);
   const dispatch = useDispatch();
 
@@ -41,7 +39,7 @@ function Gender(props) {
         {selectedMale ? (
           <Fragment>
             <GenderBtn className={"male"} selected onClick={handleClick}>
-              <FontAwesomeIcon className={"male"} size={"2x"} icon={faMars} color={props.theme.themeName === "light"? "#4b5669":"#6b6a6a"}/>
+              <FontAwesomeIcon className={"male"} size={"2x"} icon={faMars} color={props.theme.themeName === "light"? "#4b5669":"#c9c9c9"}/>
             </GenderBtn>
             <GenderBtn className={"female"} onClick={handleClick}>
               <FontAwesomeIcon
@@ -62,7 +60,7 @@ function Gender(props) {
                 className={"female"}
                 size={"2x"}
                 icon={faVenus}
-                color={props.theme.themeName === "light"? "#4b5669": "#6b6a6a"}
+                color={props.theme.themeName === "light"? "#4b5669": "#c9c9c9"}
               />
             </GenderBtn>
           </Fragment>
@@ -105,8 +103,13 @@ const GenderBtn = styled.div`
       }
       else if (!props.selected && props.theme.themeName == "dark")
       {
-        return "7px 7px 14px #d0d9e5, -7px -7px 14px #faffff";
+        return "2px 2px 2px rgba(0, 0, 0, 0.2), -2px -2px 5px #faffff";
       }
+      else if(props.selected && props.theme.themeName == "dark")
+      {
+        return "inset 1px 1px 1px #faffff,2px 2px 2px rgba(0, 0, 0, 0.2)";
+      }
+
     }
   };
   `;
