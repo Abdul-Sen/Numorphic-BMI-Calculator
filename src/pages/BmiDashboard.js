@@ -25,7 +25,7 @@ export default BmiDashboard;
 
 const DashboardCard = styled.div`
   border-radius: 50px;
-  background: #e5eefc;
+  background: ${props => props.theme.colors.background};  
   box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2),
     -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
   max-width: 800px;
@@ -40,7 +40,7 @@ const DashboardCard = styled.div`
 const AppTitle = styled.h2`
   font-family: roboto;
   text-align: center;
-  color: #6d7b94;
+  color:  ${props => props.theme.colors.fontcolor};
 `;
 
 const Flexbox = styled.div`
