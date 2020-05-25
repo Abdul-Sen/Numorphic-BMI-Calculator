@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/Neomorphic-BMI-Calculator/static/js/main.ff47e6e4.chunk.js",
-    "main.js.map": "/Neomorphic-BMI-Calculator/static/js/main.ff47e6e4.chunk.js.map",
-    "runtime~main.js": "/Neomorphic-BMI-Calculator/static/js/runtime~main.dff1b389.js",
-    "runtime~main.js.map": "/Neomorphic-BMI-Calculator/static/js/runtime~main.dff1b389.js.map",
-    "static/js/2.ed47603a.chunk.js": "/Neomorphic-BMI-Calculator/static/js/2.ed47603a.chunk.js",
-    "static/js/2.ed47603a.chunk.js.map": "/Neomorphic-BMI-Calculator/static/js/2.ed47603a.chunk.js.map",
-    "index.html": "/Neomorphic-BMI-Calculator/index.html",
-    "precache-manifest.50fd94c6a353e96fd4f0fef3ad604dd3.js": "/Neomorphic-BMI-Calculator/precache-manifest.50fd94c6a353e96fd4f0fef3ad604dd3.js",
-    "service-worker.js": "/Neomorphic-BMI-Calculator/service-worker.js"
+    "main.js": "/Numorphic-BMI-Calculator/static/js/main.ff47e6e4.chunk.js",
+    "main.js.map": "/Numorphic-BMI-Calculator/static/js/main.ff47e6e4.chunk.js.map",
+    "runtime~main.js": "/Numorphic-BMI-Calculator/static/js/runtime~main.0396aba7.js",
+    "runtime~main.js.map": "/Numorphic-BMI-Calculator/static/js/runtime~main.0396aba7.js.map",
+    "static/js/2.4515d664.chunk.js": "/Numorphic-BMI-Calculator/static/js/2.4515d664.chunk.js",
+    "static/js/2.4515d664.chunk.js.map": "/Numorphic-BMI-Calculator/static/js/2.4515d664.chunk.js.map",
+    "index.html": "/Numorphic-BMI-Calculator/index.html",
+    "precache-manifest.bf70c1ef87a802ae99434419de6336fb.js": "/Numorphic-BMI-Calculator/precache-manifest.bf70c1ef87a802ae99434419de6336fb.js",
+    "service-worker.js": "/Numorphic-BMI-Calculator/service-worker.js"
   }
 }
