@@ -8,7 +8,7 @@ function BmiDashboard() {
   return (
     <Fragment>
       <DashboardCard>
-        <AppTitle>Neomorphic BMI Calculator</AppTitle>
+        <AppTitle>Neumorphic BMI Calculator</AppTitle>
         <Flexbox>
           <Result />
           <Gender />
