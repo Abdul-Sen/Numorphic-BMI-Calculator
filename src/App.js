@@ -10,7 +10,7 @@ import ToggleTheme from './components/toggleTheme';
 
 const AppTheme = styled.div`
 background: ${props => props.theme.colors.background};
-height: 100%;
+min-height: 100vh;
 padding: 20px;
 font-family: roboto;
 
