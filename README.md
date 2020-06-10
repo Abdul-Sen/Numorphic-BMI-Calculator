@@ -1,6 +1,6 @@
 # Neumorphic-BMI-Calculator
 
-### Demo Link [Here](https://abdul-sen.github.io/Neomorphic-BMI-Calculator/)
+### Demo Link [Here](https://abdul-sen.github.io/Numorphic-BMI-Calculator/)
 
 This is a small frontend UI project I recently did to accomplish the following:
 
